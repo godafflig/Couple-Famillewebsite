@@ -1,0 +1,242 @@
+/* CSS reset */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    overflow-x: hidden; /* Pour éviter la barre de défilement horizontale */
+    background-color: #ffffff;
+    /* Le dégradé va du bas (#3498db, bleu) vers le haut (#ffffff, blanc) */
+}
+
+ /* Autres styles pour le contenu de la page */
+
+
+/* Autres styles pour vos éléments de contenu */
+
+header {
+    background-color: #ffffff;
+    position: fixed;
+    border-radius: 0px 0px 30px 30px;
+    top: 0;
+    left: 0;
+    width: 100%; /* Prendre toute la largeur de la fenêtre */
+    z-index: 100; /* Assurez-vous qu'il est au-dessus des autres éléments */
+}
+.header {
+    position: relative;
+    /* Utiliser Flexbox pour aligner les éléments horizontalement */
+    justify-content: center;
+    /* Centrer horizontalement les éléments à l'intérieur du header */
+    align-items: center;
+    /* Centrer verticalement les éléments à l'intérieur du header */
+    height: 70px;
+    /* Hauteur du header (ajustez selon vos besoins) */
+    box-shadow: 	0px 39px 35px -33px rgb(0, 0, 0);
+    border:	1px solid rgba(0, 0, 0,  0.1);
+    border-radius:	0px 0px 30px 30px;
+    
+   
+    
+
+
+
+}
+
+.Accueil {
+    text-align: center;
+    margin-top: 20px;
+    color: #000000;
+}
+
+.Accueil>p {
+    
+    color: #000000;
+}
+
+.apropo {
+    text-align: center;
+    margin-top: 100px;
+    color: #000000;
+}
+
+.apropo>p {
+    
+    color: #000000;
+}
+
+.logocoupleetfamille {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+}
+
+.Decouvrir {
+    text-align: center;
+    margin-top: 100px;
+    color: #000000;
+}
+
+.Decouvrir>p {
+    
+    color: #000000;
+}
+
+.Localisation {
+    text-align: center;
+    margin-top: 100px;
+    color: #000000;
+}
+
+.Localisation>p {
+    margin: 50px 0px 50px 0px;
+   
+    color: #000000;
+}
+
+.video {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-top: 40px;
+    width: 350px;
+    height: 350px;
+}
+
+hr {
+    display: block;
+    height: 4px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+    color: #000000;
+}
+
+.btn_menu {
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 45px;
+    height: 45px;
+}
+
+.menu-container {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-in-out;
+    background-color: #ffffff;
+}
+
+.menu-container.active {
+    max-height: 200px;
+    border-radius: 0px 0px 30px 30px;
+    color: #000000;
+}
+
+.nav_list {
+    list-style: none;
+  
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.nav__item {
+    margin: 10px 0;
+    color: #000000;
+}
+
+.nav__link {
+    color: #000000;
+    /* Couleur du texte de la liste */
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+    /* Transition de la couleur du texte */
+}
+
+.nav__link:hover {
+    color: #ff9900;
+    /* Couleur du texte au survol */
+}
+.map{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-top: 40px;
+    width: 350px;
+    height: 350px;
+}
+.logofamille{
+    animation: 1s ease-out 0s 1 slideInLeft;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+    margin-top: 160px;
+    width: 300px;
+}
+#titrelogo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+
+}
+
+
+
+@keyframes slideInLeft {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+    
+.Horaires{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+
+}
+.Horaires>p{
+  margin-bottom: 20px;
+}
