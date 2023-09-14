@@ -107,8 +107,11 @@ header {
 }
 
 .Decouvrir>p {
-    
     color: #000000;
+}
+
+#titre{
+    font-size: 25px;
 }
 
 .Localisation {
@@ -119,7 +122,6 @@ header {
 
 .Localisation>p {
     margin: 50px 0px 50px 0px;
-   
     color: #000000;
 }
 
@@ -137,7 +139,7 @@ hr {
     display: block;
     height: 4px;
     border: 0;
-    border-top: 1px solid #ccc;
+    border-top: 3px solid #ff0000;
     margin: 1em 0;
     padding: 0;
     color: #000000;
@@ -215,6 +217,7 @@ hr {
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+    color: black;
 
 }
 
@@ -239,4 +242,21 @@ hr {
 }
 .Horaires>p{
   margin-bottom: 20px;
+}
+.header .menu-container .nav_list {
+    list-style: none; /* Pour supprimer les puces de la liste */
+    padding: 0; /* Supprimer le remplissage par défaut de la liste */
+}
+
+.header .menu-container .nav_list .nav__item {
+    border-bottom: 1px solid #ccc; /* Ajouter une bordure en bas de chaque élément de la liste */
+    padding: 10px; /* Ajouter un remplissage pour espacer les éléments */
+}
+
+.header .menu-container .nav_list .nav__item:last-child {
+    border-bottom: none; /* Ne pas ajouter de bordure en bas au dernier élément pour éviter un double trait */
+}
+/* Au survol, appliquer un fond gris */
+.header .menu-container .nav_list .nav__item:hover {
+    background-color: #f0f0f0; /* Couleur grise au survol */
 }
