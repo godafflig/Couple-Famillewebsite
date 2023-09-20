@@ -27,30 +27,35 @@ td {
 }
 
 
-html, body {
+html,
+body {
     height: 100%;
     margin: 0;
     font-family: Arial, sans-serif;
     color: #ffffff;
-    overflow-x: hidden; /* Pour éviter la barre de défilement horizontale */
+    overflow-x: hidden;
+    /* Pour éviter la barre de défilement horizontale */
     background-color: #ffffff;
     /* Le dégradé va du bas (#3498db, bleu) vers le haut (#ffffff, blanc) */
 }
 
- /* Autres styles pour le contenu de la page */
+/* Autres styles pour le contenu de la page */
 
 
 /* Autres styles pour vos éléments de contenu */
 
 header {
-    background-color: #ffffff;
+    background-color: #90B6EF;
     position: fixed;
     border-radius: 0px 0px 30px 30px;
     top: 0;
     left: 0;
-    width: 100%; /* Prendre toute la largeur de la fenêtre */
-    z-index: 100; /* Assurez-vous qu'il est au-dessus des autres éléments */
+    width: 100%;
+    /* Prendre toute la largeur de la fenêtre */
+    z-index: 100;
+    /* Assurez-vous qu'il est au-dessus des autres éléments */
 }
+
 .header {
     position: relative;
     /* Utiliser Flexbox pour aligner les éléments horizontalement */
@@ -60,26 +65,46 @@ header {
     /* Centrer verticalement les éléments à l'intérieur du header */
     height: 70px;
     /* Hauteur du header (ajustez selon vos besoins) */
-    box-shadow: 	0px 39px 35px -33px rgb(0, 0, 0);
-    border:	1px solid rgba(0, 0, 0,  0.1);
-    border-radius:	0px 0px 30px 30px;
-    
-   
-    
+    box-shadow: 0px 39px 35px -33px rgb(0, 0, 0);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0px 0px 30px 30px;
+    background: #90B6EF;
+}
 
+.premiere {
+    position: relative;
+    background-image: url(/Couple-Famillewebsite/Image/R\ \(1\).jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 500px;
+    margin-bottom: 0;
+}
 
-
+.premiere::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    /* Couleur de fond sombre semi-transparente */
 }
 
 .Accueil {
+
     text-align: center;
-    margin-top: 20px;
+    margin-top: 120px;
     color: #000000;
 }
 
 .Accueil>p {
-    
-    color: #000000;
+    position: relative;
+    z-index: 1;
+    margin-top: 12px;
+    font-family: 'Sacramento', cursive;
+    color: #ffffff;
+    font-size: 24px;
 }
 
 .apropo {
@@ -89,7 +114,7 @@ header {
 }
 
 .apropo>p {
-    
+
     color: #000000;
 }
 
@@ -108,10 +133,15 @@ header {
 
 .Decouvrir>p {
     color: #000000;
+    text-align: left;
+    font-size: small;
+    margin-left: 10px;
+    line-height: 1.5;
 }
 
-#titre{
-    font-size: 25px;
+#titre {
+    font-size: 24px;
+    text-align: center;
 }
 
 .Localisation {
@@ -136,46 +166,173 @@ header {
 }
 
 hr {
+    margin: 0;
     display: block;
     height: 4px;
     border: 0;
     border-top: 3px solid #ff0000;
-    margin: 1em 0;
     padding: 0;
     color: #000000;
 }
 
+.btn {
+
+    align-items: center;
+    background-color: #ED1E18;
+    border: 2px solid #111;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #111;
+    cursor: pointer;
+    display: flex;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    height: 48px;
+    justify-content: center;
+    line-height: 24px;
+    max-width: 100%;
+    padding: 0 25px;
+    position: relative;
+    text-align: center;
+    color: #f0f0f0;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 225px;
+    margin-top: 30px;
+
+}
+
+.btn:hover {
+    background-color: rgb(128, 0, 0);
+}
+
+.modal-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: space-around;
+}
+
+table {
+    border-collapse: collapse;
+    width: 50%;
+    margin: 20px auto;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: center;
+}
+
+
+
+
+.menu {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row;
+    justify-content: flex-end;
+    background: #90B6EF;
+}
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    color: #000;
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 .btn_menu {
 
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-
+    display: flex;
     width: 45px;
     height: 45px;
+    align-items: center;
+    margin-right: 15px;
+
 }
 
 .menu-container {
     overflow: hidden;
     max-height: 0;
     transition: max-height 0.3s ease-in-out;
-    background-color: #ffffff;
+    background-color: #90B6EF;
 }
 
 .menu-container.active {
-    max-height: 200px;
+    max-height: 230px;
     border-radius: 0px 0px 30px 30px;
     color: #000000;
 }
 
 .nav_list {
     list-style: none;
-  
+
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
 }
+
+.rdvcontainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: space-around;
+
+}
+
+
 
 .nav__item {
     margin: 10px 0;
@@ -183,7 +340,7 @@ hr {
 }
 
 .nav__link {
-    color: #000000;
+    color: #ffffff;
     /* Couleur du texte de la liste */
     text-decoration: none;
     transition: color 0.3s ease-in-out;
@@ -194,7 +351,8 @@ hr {
     color: #ff9900;
     /* Couleur du texte au survol */
 }
-.map{
+
+.map {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -203,16 +361,19 @@ hr {
     width: 350px;
     height: 350px;
 }
-.logofamille{
+
+.logofamille {
     animation: 1s ease-out 0s 1 slideInLeft;
-    display: block;
     margin-left: auto;
     margin-right: auto;
-    
-    margin-top: 160px;
-    width: 300px;
+    transform: translateX(-50%) translateY(100px);
+    /* Déplace l'image vers le bas de 100px tout en la centrant horizontalement */
+    width: 50%;
+    position: relative;
+    left: 50%;
 }
-#titrelogo{
+
+#titrelogo {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -221,42 +382,88 @@ hr {
 
 }
 
+.main {
+    position: relative;
+    background-image: url(/Couple-Famillewebsite/Image/maintendu.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 500px;
+    margin-bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.main>p {
+    color: #f0f0f0;
+}
+
+.main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+
+}
+
 
 
 @keyframes slideInLeft {
     0% {
-      transform: translateY(-100%);
+        transform: translateX(-100%);
     }
+
     100% {
-      transform: translateY(0);
+        transform: translateX(50);
     }
-  }
-  
-    
-.Horaires{
-    display: block;
+}
+
+
+.Horaires {
+
     margin-left: auto;
     margin-right: auto;
     width: 50%;
 
 }
-.Horaires>p{
-  margin-bottom: 20px;
+
+.Horaires>p {
+    margin-bottom: 20px;
 }
+
 .header .menu-container .nav_list {
-    list-style: none; /* Pour supprimer les puces de la liste */
-    padding: 0; /* Supprimer le remplissage par défaut de la liste */
+    list-style: none;
+    /* Pour supprimer les puces de la liste */
+    padding: 0;
+    /* Supprimer le remplissage par défaut de la liste */
 }
 
 .header .menu-container .nav_list .nav__item {
-    border-bottom: 1px solid #ccc; /* Ajouter une bordure en bas de chaque élément de la liste */
-    padding: 10px; /* Ajouter un remplissage pour espacer les éléments */
+    border-bottom: 1px solid #ccc;
+    /* Ajouter une bordure en bas de chaque élément de la liste */
+    padding: 10px;
+    /* Ajouter un remplissage pour espacer les éléments */
 }
 
 .header .menu-container .nav_list .nav__item:last-child {
-    border-bottom: none; /* Ne pas ajouter de bordure en bas au dernier élément pour éviter un double trait */
+    border-bottom: none;
+    /* Ne pas ajouter de bordure en bas au dernier élément pour éviter un double trait */
 }
+
 /* Au survol, appliquer un fond gris */
 .header .menu-container .nav_list .nav__item:hover {
-    background-color: #f0f0f0; /* Couleur grise au survol */
+    background-color: #f0f0f0;
+    /* Couleur grise au survol */
+}
+
+.left-line {
+
+    top: 0;
+    margin-top: 30px;
+    margin-left: 50px;
+    height: 300px;
+    border: none;
+    border-left: 5px solid #ED1E18;
+    /* Épaisseur et couleur de la ligne */
 }
