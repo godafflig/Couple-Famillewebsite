@@ -73,12 +73,18 @@ header {
 
 .premiere {
     position: relative;
-    background-image: url(/Couple-Famillewebsite/Image/R\ \(1\).jpg);
+    background-image: url(/Couple-Famillewebsite/Image/couplevelo.jpg);
     background-size: cover;
+    /* Redimensionne l'image pour remplir entièrement la div */
     background-repeat: no-repeat;
-    height: 500px;
+    background-position: center center;
+    /* Centre l'image horizontalement et verticalement */
+    background-attachment: fixed;
+    /* Fixe l'image en arrière-plan pour éviter le défilement */
+    height: 400px;
     margin-bottom: 0;
 }
+
 
 .premiere::before {
     content: "";
@@ -139,9 +145,18 @@ header {
     line-height: 1.5;
 }
 
-#titre {
-    font-size: 24px;
+.titre {
+    font-size: 40px;
     text-align: center;
+
+    color: #000;
+}
+
+.texte {
+    font-size: 16px;
+    text-align: center;
+
+    color: #000;
 }
 
 .Localisation {
@@ -152,7 +167,7 @@ header {
 
 .Localisation>p {
     margin: 50px 0px 50px 0px;
-    color: #000000;
+    color: #000;
 }
 
 .video {
@@ -163,6 +178,13 @@ header {
     margin-top: 40px;
     width: 350px;
     height: 350px;
+}
+
+.scrollable-content {
+    max-height: 80vh;
+    /* Hauteur maximale relative à la vue (viewport height, vh) */
+    overflow-y: auto;
+    /* Ajoute une barre de défilement en cas de dépassement de la hauteur maximale */
 }
 
 hr {
@@ -178,7 +200,7 @@ hr {
 .btn {
 
     align-items: center;
-    background-color: #ED1E18;
+    background-color: #7AAAEB;
     border: 2px solid #111;
     border-radius: 8px;
     box-sizing: border-box;
@@ -200,12 +222,12 @@ hr {
     -webkit-user-select: none;
     touch-action: manipulation;
     width: 225px;
-    margin-top: 30px;
+    margin: 25px 0px 25px 0px;
 
 }
 
 .btn:hover {
-    background-color: rgb(128, 0, 0);
+    background-color: #ED1E18;
 }
 
 .modal-container {
@@ -273,8 +295,15 @@ td {
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
+    width: 90%;
     color: #000;
+    font-size: 15px;
+}
+
+.modal-content p {
+
+    margin: 10px 0px 0px 0px;
+
 }
 
 .close {
@@ -348,7 +377,7 @@ td {
 }
 
 .nav__link:hover {
-    color: #ff9900;
+    color: #7AAAEB;
     /* Couleur du texte au survol */
 }
 
@@ -384,12 +413,16 @@ td {
 
 .main {
     position: relative;
-    background-image: url(/Couple-Famillewebsite/Image/maintendu.png);
+    background-image: url(/Couple-Famillewebsite/Image/mainarriereplan.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 500px;
+    background-position: center center;
+    /* Centre l'image horizontalement et verticalement */
+    background-attachment: fixed;
+    /* Fixe l'image en arrière-plan pour éviter le défilement */
+    height: 400px;
     margin-bottom: 0;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-position-y: -350px;
 }
 
 .main>p {
@@ -460,10 +493,202 @@ td {
 .left-line {
 
     top: 0;
-    margin-top: 30px;
-    margin-left: 50px;
-    height: 300px;
+    margin-top: -10px;
+    margin-left: 30px;
+    height: 100%;
     border: none;
     border-left: 5px solid #ED1E18;
     /* Épaisseur et couleur de la ligne */
+}
+
+.container {
+    display: flex;
+}
+
+.left-column {
+    flex: 1;
+}
+
+.right-column {
+    flex: 3;
+
+}
+
+.map {
+    width: 80%;
+}
+
+/* .left-line {
+    height: 100%;
+
+    margin-top: -10px;
+    margin-left: 50px;
+    border-left: 5px solid #ED1E18;
+} */
+.container p {
+    color: #ED1E18;
+    font-size: 16px;
+    margin: -10px 0px 20px 0px;
+}
+
+#texte {
+    color: #000;
+    text-align: center;
+}
+
+@media (max-width: 400px) {
+
+    /* Par exemple, pour les écrans plus petits que 400px */
+    .map {
+        display: none;
+    }
+
+    .header-laptop {
+        display: none;
+    }
+    .premiere {
+        position: relative;
+        background-image: url(/Couple-Famillewebsite/Image/couplevelo.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        /* Centre l'image horizontalement et verticalement */
+        background-attachment: fixed;
+        /* Fixe l'image en arrière-plan pour éviter le défilement */
+        height: 400px;
+        margin-bottom: 0;
+        background-position-y: -350px;
+    }
+
+}
+
+@media (min-width: 400px) {
+
+    /* Par exemple, pour les écrans plus grand que 400px */
+    .btn{
+        width: 20%;
+        height: 100px;
+        border-radius: 100px;
+    }
+
+    .logofamille {
+        width: 20%;
+        height: 30%;
+    }
+
+    .premiere {
+        height: 100%;
+    }
+
+    .Accueil>p {
+        position: relative;
+        z-index: 1;
+        margin-top: 62px;
+        font-family: 'Sacramento', cursive;
+        color: #ffffff;
+        font-size: 64px;
+    }
+
+    .header {
+        display: none;
+    }
+
+    header {
+        position: static;
+        background-color: #00000000;
+    }
+
+    .header-laptop {
+
+        background-color: #00000000;
+    }
+
+    .header-laptop ul {
+        background-color: #6D4850;
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        justify-content: space-around;
+    }
+
+    .modal-container {
+        display: flex;
+        flex-flow: wrap;
+        place-content: stretch space-around;
+        align-items: center;
+        flex-direction: column;
+    }
+
+
+}
+
+.container .right-column p img {
+
+    width: 246px;
+    /* Ajuste automatiquement la hauteur en fonction de la largeur */
+}
+
+
+.map1 {
+    display: none;
+}
+
+.container .right-column p img {
+
+    margin: 0px 30px 0px 0px;
+    width: 46px;
+    height: auto;
+    /* Ajuste automatiquement la hauteur en fonction de la largeur */
+}
+
+.equipe {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Styles pour la div d'arrière-plan de la vidéo */
+.equipe {
+    position: relative;
+    height: 100vh;
+    /* Assurez-vous que la div équipe prend 100% de la hauteur de la vue (viewport height) */
+    overflow: hidden;
+    /* Cache le débordement si nécessaire */
+}
+
+
+/* Styles pour la vidéo */
+.video {
+    margin-top: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+    /* Ajustez l'opacité selon vos préférences pour la lisibilité */
+}
+
+/* Styles pour le texte superposé */
+.text-overlay {
+    font-size: large;
+    margin-top: 200px;
+    height: auto;
+    position: relative;
+    /* Assurez-vous que le texte est positionné par rapport à la div d'équipe */
+    z-index: 1;
+    /* Placez le texte au-dessus de la vidéo */
+    color: #fff;
+    /* Couleur du texte */
+    text-align: center;
+    padding: 20px;
+    /* Espacement intérieur pour le texte */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fond semi-transparent pour améliorer la lisibilité */
+}
+
+.texte {
+    max-width: 100%;
+    /* Ajustez la largeur du texte selon vos préférences */
 }

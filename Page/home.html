@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/Couple-Famillewebsite/Static/home.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sacramento">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 
     <title>couple et famille</title>
@@ -13,7 +14,22 @@
 
 <body>
     <header>
-
+        <div class="header-laptop">
+            <ul>
+                <li class="nav__item">
+                    <a href="#Accueil" class="nav__link">Accueil</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#Quisommesnous" class="nav__link">Qui sommes nous ?</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#Pourquoi" class="nav__link"" >Pourquoi nous contacter ?</a>
+            </li>
+            <li class=" nav__item">
+                        <a href="#Localisation" class="nav__link">Nous trouver</a>
+                </li>
+            </ul>
+        </div>
         <div class="header">
             <div class="menu">
                 <label for="saveForm" class="btn_menu">Menu</label>
@@ -59,7 +75,7 @@
         <button class="btn" id="Rdv">Prendre rdv</button>
     </div>
     <div class="apropo" id="Quisommesnous">
-        <h1 id="titre">Qui sommes nous ?</h1>
+        <h1 class="titre"">Qui sommes nous ?</h1>
         <p></p>
         <p>Nous sommes une association loi 1901 reconnue et référencée. Notre association est membre de la fédération
             nationale couples et familles reconnue d'utilité publique bénéficiant d'un certain nombre d'agréments.
@@ -68,117 +84,167 @@
             confessionnelle et apolitique.</p>
 
     </div>
-    <div class="modal-container">
-        <button id="myBtn" class="btn">Le métier de Conseiller conjugal et familial</button>
+    <div class=" modal-container">
 
 
-        <div id="myModal" class="modal">
+
+            <div id="myModal" class="modal">
 
 
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <h2>Le métier de Conseiller conjugal et familial (CCF)</h2>
-                <p> consiste à exercer des activités d’information,
-                    d’orientation et d’accompagnement dans tous les domaines liés à la vie affective et sexuelle, aux
-                    conduites
-                    à risques, aux discriminations, aux violences (sexuelles, sexistes, de couple...), aux problèmes
-                    relationnels dans le couple et dans la famille.</p>
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Le métier de Conseiller conjugal et familial (CCF)</h2>
+                    <p> consiste à exercer des activités d’information,
+                        d’orientation et d’accompagnement dans tous les domaines liés à la vie affective et sexuelle,
+                        aux
+                        conduites
+                        à risques, aux discriminations, aux violences (sexuelles, sexistes, de couple...), aux problèmes
+                        relationnels dans le couple et dans la famille.</p>
+                </div>
+
             </div>
-
-        </div>
-        <button id="myBtn2" class="btn">La charte</button>
-        <div id="myModal2" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <h2>La Charte</h2>
-                <p>Couples et familles a pour objectif, par sa réflexion et son action, de permettre le développement de
-                    la personne dans sa vie relationnelle.
-
-                    Couples et familles affirme la primauté de la personne :
-                    - Être unique, être de désir, capable d’évoluer, de prendre la responsabilité de sa vie, d’exercer
-                    sa liberté ;
-                    - Être sexué, dont la sexualité s’exprime dans l’affectivité, le plaisir, la fécondité et dans la
-                    différence ;
-                    - Être de relation qui a besoin d’être reconnu, respecté et aimé pour pouvoir lui-même reconnaitre,
-                    respecter et aimer ;
-
-                    Couples et Familles entend garder son indépendance à l’égard de tout mouvement politique,
-                    idéologique, religieux et appliquer les principes de la laïcité.
-                    Couples et Familles se réfère à la Déclaration universelle des droits de l’homme de 1948 et à la
-                    Convention internationale des droits de l’enfant de 1989.
-
-                    Couples et familles dans les domaines de la vie relationnelle, affective et sexuelle exerce des
-                    actions :
-                    - D’accueil, d’information et d’orientation ;
-                    - De prévention ;
-                    - D’écoute, de soutien et d’accompagnement ;
-                    - De formation ;
-                    Auprès d’enfants, d’adolescents, d’adultes, seuls, en couple, en famille ou en groupe.
-                    Couples et Familles exige de ses membres une formation approfondie et une qualification adaptée.
-                    Les membres des associations Couples et Familles adhèrent à la présente charte comme principe de
-                    réflexion et d’action.
-                    Les associations sont regroupées en une Fédération Nationale
-                </p>
+            <button id="myBtn2" class="btn">La charte</button>
+            <div id="myModal2" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>La Charte</h2>
+                    <div class="scrollable-content"></div>
+                    <p>Couples et familles a pour objectif de promouvoir le développement de la personne dans sa vie
+                        relationnelle.</p>
+                    <p>Couples et familles reconnaît :</p>
+                    <ul>
+                        <li>La primauté de la personne en tant qu'être unique, responsable de sa vie et de sa liberté.
+                        </li>
+                        <li>La dimension sexuée de l'individu, avec une sexualité s'exprimant dans l'affectivité, le
+                            plaisir et la différence.</li>
+                        <li>Le besoin fondamental d'être reconnu, respecté et aimé dans les relations humaines.</li>
+                    </ul>
+                    <p>Couples et Familles :</p>
+                    <ul>
+                        <li>Maintient son indépendance par rapport à tout mouvement politique, idéologique ou religieux.
+                        </li>
+                        <li>Se conforme aux principes de la laïcité.</li>
+                    </ul>
+                    <p>Couples et Familles se réfère aux déclarations suivantes :</p>
+                    <ul>
+                        <li>La Déclaration universelle des droits de l'homme de 1948.</li>
+                        <li>La Convention internationale des droits de l'enfant de 1989.</li>
+                    </ul>
+                    <p>Couples et familles mène des actions dans les domaines :</p>
+                    <ul>
+                        <li>de l'accueil, de l'information et de l'orientation.</li>
+                        <li>de la prévention.</li>
+                        <li>de l'écoute, du soutien et de l'accompagnement.</li>
+                        <li>de la formation.</li>
+                    </ul>
+                    <p>Ces actions s'adressent à tous : enfants, adolescents, adultes, en couple, en famille ou en
+                        groupe.</p>
+                    <p>Couples et Familles exige de ses membres une formation approfondie et une qualification adaptée.
+                    </p>
+                    <p>Les membres des associations Couples et Familles adhèrent à la présente charte comme principe de
+                        réflexion et d'action.</p>
+                    <p>Les associations sont regroupées en une Fédération Nationale.</p>
+                </div>
+                <br>
+                <br>
+                <br>
             </div>
-        </div>
+            <h1 class="titre"">Le métier de Conseiller conjugal et familial</h1>
+            <p id=" texte">Ethique et déontologie : Le conseiller conjugal et familial assure à
+                son patient la confidentialité complète des entretiens. Son nom, activité et la nature du travail ne
+                seront
+                jamais divulgués à un tiers. Le conseiller conjugal et familial respecte les croyances et les valeurs de
+                son
+                patient.</p>
+                <button id="myBtn" class="btn">en savoir plus</button>
     </div>
 
-    <br>
-    <br>
-    <br>
-    <p href="">Ethique et déontologie : Le conseiller conjugal et familial assure à
-        son patient la confidentialité complète des entretiens. Son nom, activité et la nature du travail ne
-        seront
-        jamais divulgués à un tiers. Le conseiller conjugal et familial respecte les croyances et les valeurs de
-        son
-        patient.</p>
+
+
 
     </div>
 
     <img class="logocoupleetfamille" src="/Image/logocoupleetfamille.jpg" alt="">
 
     <div class="Decouvrir" id="Pourquoi">
-        <h1 id="titre">Pourquoi nous contacter ?</h1>
-        <div class="main">
-
-            <br>
-            <p>Vous n’arrivez plus à communiquer
+        <h1 class="titre"">Pourquoi nous contacter ?</h1>
+        <div class=" main">
+            <div class="text-overlay">
                 <br>
-                Vous vous sentez seul(e) même en couple
-                <br>
-                Vous vous sentez de plus en plus insatisfaite(e)
-                <br>
-                Vous vous disputez au sujet des enfants
-                <br>
-                Vous n’éprouvez plus de desir comme avant
-                <br>
-                Vous vivez de la violence conjugale
-                <br>
-                Vous avez vécu un deuil, une infidélité, une séparation
-                <br>
-                Vous avez mal vécu une IVG
-                <br>
-                Vous souffrez d’anxiété
-                <br>
-                Etc …
-            </p>
-        </div>
-        <hr>
+                <p>Vous n’arrivez plus à communiquer
+                    <br>
+                    Vous vous sentez seul(e) même en couple
+                    <br>
+                    Vous vous sentez de plus en plus insatisfaite(e)
+                    <br>
+                    Vous vous disputez au sujet des enfants
+                    <br>
+                    Vous n’éprouvez plus de desir comme avant
+                    <br>
+                    Vous vivez de la violence conjugale
+                    <br>
+                    Vous avez vécu un deuil, une infidélité, une séparation
+                    <br>
+                    Vous avez mal vécu une IVG
+                    <br>
+                    Vous souffrez d’anxiété
+                    <br>
+                    Etc …
+                </p>
+            </div>
+    </div>
+    <hr>
 
     </div>
 
+    <div class="equipe">
+        <div class="video-background">
+            <video class="video" width="320" height="240" controls autoplay muted loop>
+                <source src="/Couple-Famillewebsite/Image/meeting_-_2340 (Original) (online-video-cutter.com).mp4"
+                    type="video/mp4">
+            </video>
+        </div>
+        <h1 class="titre">L'équipe</h1>
+        <div class="text-overlay">
+            <p>
+                Notre offrons en un même lieu les services d’une équipe pluridisciplinaire :
+            </p>
 
-    <video class="video" width="320" height="240" controls autoplay>
-        <source src="/Couple-Famillewebsite/Image/meeting_-_2340 (Original) (online-video-cutter.com).mp4"
-            type="video/mp4">
-    </video>
+            <ul>
+                <li>Nous proposons divers types d’entretiens thérapeutiques et de médiation</li>
+                <li>Le travail en équipe instaure une réelle dynamique et un enrichissement pour les différents
+                    intervenants. Cette collaboration interdisciplinaire permet de mieux orienter et accompagner les
+                    personnes en difficulté dans leur recherche de solutions.</li>
+            </ul>
+
+            <p>Nous garantissons la sécurité d’un cadre déontologique :</p>
+
+            <ul>
+                <li>Des conseillères et thérapeutes qualifiées</li>
+                <li>Une médiatrice familiale diplômée d’État</li>
+                <li>L’adhésion à une charte comme principe de réflexion et d’action</li>
+                <li>Une formation continue obligatoire</li>
+                <li>Une supervision et analyse de la pratique en équipe</li>
+            </ul>
+
+            <p>Nos tarifs :</p>
+
+            <ul>
+                <li>Nous proposons une grille de tarifs adaptés aux ressources de chacun</li>
+            </ul>
+            </p>
+
+        </div>
+    </div>
     <hr>
+
+
 
     <div class="Localisation" id="Localisation">
 
 
         <table class="Horaires">
-            <h1 id="titre">Horaires ouverture</h1>
+            <h1 class="titre">Horaires ouverture</h1>
             <tr>
                 <td>Lundi</td>
                 <td>
@@ -211,7 +277,7 @@
                     Fermé</td>
             </tr>
         </table>
-        <h1 id="titre">Nos tarifs </h1>
+        <h1 class="titre">Nos tarifs </h1>
 
         <table>
             <tr>
@@ -251,22 +317,30 @@
                 <td>85€</td>
             </tr>
         </table>
-        <p id="titre">Nous trouver</p>
+        <p class="titre">Nous trouver</p>
         <p>Notre secrétaire saura répondre à vos questions et pourra vous donner un rendez-vous. Elle reçoit vos
             appels
             du lundi au vendredi de 9h30 à 12h30. Au 04.78.60.34.32 , vous pouvez aussi laissez un message qu'elle
             traitera dans les meilleurs délais. </p>
 
     </div>
-    <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d695.9558204907376!2d4.846796228569169!3d45.75468863391652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4ea5d3b78f459%3A0x5f33d156f6b9b206!2sCouples%20et%20Familles%20du%20Rh%C3%B4ne!5e0!3m2!1sfr!2sfr!4v1694601611627!5m2!1sfr!2sfr"
-        class="map"></iframe>
+    <div class="container">
+        <div class="left-column">
+            <hr class="left-line">
+        </div>
+        <div class="right-column">
 
-    <p>284 rue vendôme 69003 Lyon</p>
-    <p>04 78 60 34 32 </p>
-    <p>couplefamillelyon@wanadoo.fr</p>
 
-    <hr class="left-line">
+            <p id="map1"><img src="/Couple-Famillewebsite/Image/location.png" alt="Icône" /><a
+                    href="https://www.google.com/maps?q=284+rue+vendôme,+69003+Lyon" target="_blank">284 rue vendôme
+                    69003 Lyon</a>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d695.9558204907376!2d4.846796228569169!3d45.75468863391652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4ea5d3b78f459%3A0x5f33d156f6b9b206!2sCouples%20et%20Familles%20du%20Rh%C3%B4ne!5e0!3m2!1sfr!2sfr!4v1694601611627!5m2!1sfr!2sfr"
+                    class="map"></iframe>
+            <p><img src="/Couple-Famillewebsite/Image/smartphone-call.png" alt="Icône" />04 78 60 34 32 </p>
+            <p><img src="/Couple-Famillewebsite/Image/mail.png" alt="Icône" /></i>couplefamillelyon@wanadoo.fr</p>
+        </div>
+    </div>
 </body>
 <footer>
 
