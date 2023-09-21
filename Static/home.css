@@ -70,7 +70,17 @@ header {
     border-radius: 0px 0px 30px 30px;
     background: #90B6EF;
 }
-
+.btnA{
+    color: #7AAAEB;
+    font-size: 22px;
+    background-color: #00000000;
+    border: none;
+}
+.btnA:hover{
+    color: #7AAAEB;
+    font-size: 22px;
+    border-color: #000;
+}
 .premiere {
     position: relative;
     background-image: url(/Couple-Famillewebsite/Image/couplevelo.jpg);
@@ -84,7 +94,25 @@ header {
     height: 400px;
     margin-bottom: 0;
 }
-
+.contact-container p{
+    text-align: center;
+}
+.contact-container img {
+    width: 240px;
+}
+.charte-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    left: 100px;
+    justify-content: flex-end;
+    margin-top: 200px;
+    margin-bottom: 50px;
+}
+.charte-container > img{
+   width: 36px;
+   height: 36px;
+}
 
 .premiere::before {
     content: "";
@@ -135,10 +163,36 @@ header {
 }
 
 .Decouvrir {
+    display: flex;
     text-align: center;
     margin-top: 100px;
     color: #000000;
+    flex-direction: row;
 }
+#aloevera {
+   
+        width: 50vw; /* 50% de la largeur de l'écran */
+        height: 150vh; /* 100% de la hauteur de l'écran */
+        background-image: url(/Chemin/vers/votre/image.jpg); /* Remplacez par le chemin de votre image */
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        
+}
+.liste {
+    list-style-type: disc;
+    font-size: 20px; 
+    line-height: 2; 
+    margin-top: 50px; 
+    margin-bottom: 10px; 
+    padding-left: 20px; 
+    margin-left: 80px;
+}
+
+.liste li {
+    margin-bottom: 5px; /* Marge entre chaque élément de la liste */
+}
+
 
 .Decouvrir>p {
     color: #000000;
@@ -247,6 +301,7 @@ hr {
     flex-wrap: wrap;
     align-content: stretch;
     justify-content: space-around;
+    
 }
 
 table {
@@ -423,8 +478,11 @@ td {
 }
 
 .main {
+    display: flex;
+    align-items: center; /* Alignez verticalement au centre */
+    height: 500px;
     position: relative;
-    background-image: url(/Couple-Famillewebsite/Image/mainarriereplan.jpg);
+    background-image: url(/Couple-Famillewebsite/Image/aloevera.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -434,22 +492,26 @@ td {
     height: 400px;
     margin-bottom: 0;
     background-position-y: -350px;
-}
-
-.main>p {
+  }
+  
+  .main>p {
     color: #f0f0f0;
-}
-
-.main::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    flex: 1; /* Faites en sorte que le paragraphe prenne tout l'espace disponible en largeur */
+    margin: 0; /* Supprimez la marge par défaut du paragraphe */
+    padding: 20px; /* Ajoutez un peu d'espace intérieur */
     background-color: rgba(0, 0, 0, 0.2);
-
-}
+    text-align: left; /* Alignez le texte à gauche */
+  }
+  
+  .main::before {
+    content: "";
+    flex: 1; /* Ajoutez un espace vide à droite pour séparer le texte de l'image */
+  }
+  
+  .main img {
+    height: 100%; /* Ajustez la hauteur de l'image pour occuper toute la hauteur du conteneur */
+    max-width: 100%; /* Assurez-vous que l'image ne dépasse pas la largeur du conteneur */
+  }
 
 
 
@@ -571,13 +633,24 @@ td {
         margin-bottom: 0;
         background-position-y: -350px;
     }
-
+    .apropo>p{
+        font-size: 16px;
+        text-align: center;
+    margin: 25px 40px 0px 40px;
+    color: #000;
+    }
+    .texte{
+        font-size: 16px;
+        text-align: center;
+    margin: 25px 40px 0px 40px;
+    color: #000;
+    }
 }
 
 @media (min-width: 400px) {
     .text-overlay {
         font-size: large;
-        margin: 550px 250px 0px 250px;
+        margin: 550px 150px 0px 150px;
         height: auto;
         position: relative;
         z-index: 1;
@@ -589,8 +662,7 @@ td {
 
     /* Par exemple, pour les écrans plus grand que 400px */
     .btn {
-        width: 20%;
-        height: 100px;
+        
         border-radius: 100px;
     }
 
@@ -640,7 +712,9 @@ td {
         place-content: stretch space-around;
         align-items: center;
         flex-direction: column;
+        margin-top: 200px;
     }
+    
 
 
 }
@@ -711,7 +785,7 @@ td {
 .text-overlay {
     font-size: large;
     margin-top: 200px;
-    margin: 350px 350px 0px 350px;
+   
     height: auto;
     position: relative;
     /* Assurez-vous que le texte est positionné par rapport à la div d'équipe */
