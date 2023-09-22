@@ -1,3 +1,4 @@
+// GERE AFFICHAGE DU MENU RESPONSIVE
 document.addEventListener("DOMContentLoaded", () => {
     const menuButton = document.getElementById("saveForm");
     const menuContainer = document.querySelector(".menu-container");
@@ -7,27 +8,41 @@ document.addEventListener("DOMContentLoaded", () => {
         menuContainer.classList.toggle("active");
     });
 });
+
 document.addEventListener("DOMContentLoaded", () => {
     // ... (code précédent)
 
     // Gestion du deuxième modal
+    let btnmediatrice = document.getElementById("myBtn1")
     let btn2 = document.getElementById("myBtn2");
     let modal2 = document.getElementById("myModal2");
+    let modal3 = document.getElementById("myModal3");
     let span2 = document.getElementsByClassName("close")[1]; // Utilisez l'index 1 pour le deuxième modal
-
+    let span3 = document.getElementsByClassName("close")[2];
     btn2.onclick = function () {
         modal2.style.display = "block";
+    }
+    btnmediatrice.onclick = function () {
+        modal3.style.display = "block";
     }
 
     span2.onclick = function () {
         modal2.style.display = "none";
+    }
+    span3.onclick = function () {
+        console.log('test')
+        modal3.style.display = "none";
     }
 
     window.onclick = function (event) {
         if (event.target == modal2) {
             modal2.style.display = "none";
         }
+        if (event.target == modal3) {
+            modal3.style.display = "none";
+        }
     }
+
 });
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -49,6 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 });
+let btnmediatrice = document.getElementById("myBtn1")
 let btnrdv = document.getElementById("Rdv")
 // Get the modal
 var modal = document.getElementById("myModal");

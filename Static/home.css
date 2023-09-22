@@ -70,17 +70,21 @@ header {
     border-radius: 0px 0px 30px 30px;
     background: #90B6EF;
 }
-.btnA{
+
+.btnA {
+
     color: #7AAAEB;
-    font-size: 22px;
+    font-size: 30px;
     background-color: #00000000;
     border: none;
 }
-.btnA:hover{
+
+.btnA:hover {
     color: #7AAAEB;
     font-size: 22px;
     border-color: #000;
 }
+
 .premiere {
     position: relative;
     background-image: url(/Couple-Famillewebsite/Image/couplevelo.jpg);
@@ -93,25 +97,30 @@ header {
     /* Fixe l'image en arrière-plan pour éviter le défilement */
     height: 400px;
     margin-bottom: 0;
+
 }
-.contact-container p{
+
+.contact-container p {
     text-align: center;
 }
+
 .contact-container img {
     width: 240px;
 }
-.charte-container{
+
+.charte-container {
     width: 100%;
     display: flex;
     flex-direction: row;
     left: 100px;
-    justify-content: flex-end;
-    margin-top: 200px;
+    justify-content: center;
+    margin-top: 50px;
     margin-bottom: 50px;
 }
-.charte-container > img{
-   width: 36px;
-   height: 36px;
+
+.charte-container>img {
+    width: 36px;
+    height: 36px;
 }
 
 .premiere::before {
@@ -169,28 +178,35 @@ header {
     color: #000000;
     flex-direction: row;
 }
+
 #aloevera {
-   
-        width: 50vw; /* 50% de la largeur de l'écran */
-        height: 150vh; /* 100% de la hauteur de l'écran */
-        background-image: url(/Chemin/vers/votre/image.jpg); /* Remplacez par le chemin de votre image */
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-        
+
+    width: 50vw;
+    /* 50% de la largeur de l'écran */
+    height: 150vh;
+    /* 100% de la hauteur de l'écran */
+    background-image: url(/Chemin/vers/votre/image.jpg);
+    /* Remplacez par le chemin de votre image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
 }
+
 .liste {
-    list-style-type: disc;
-    font-size: 20px; 
-    line-height: 2; 
-    margin-top: 50px; 
-    margin-bottom: 10px; 
-    padding-left: 20px; 
+    list-style-type: none;
+
+    font-size: 20px;
+    line-height: 2;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    padding-left: 20px;
     margin-left: 80px;
 }
 
 .liste li {
-    margin-bottom: 5px; /* Marge entre chaque élément de la liste */
+    margin-bottom: 5px;
+    /* Marge entre chaque élément de la liste */
 }
 
 
@@ -255,9 +271,9 @@ header {
 hr {
     margin: 0;
     display: block;
-    height: 4px;
+    height: 10px;
     border: 0;
-    border-top: 3px solid #ff0000;
+    border-top: 12px solid #7BAAEA;
     padding: 0;
     color: #000000;
 }
@@ -301,7 +317,7 @@ hr {
     flex-wrap: wrap;
     align-content: stretch;
     justify-content: space-around;
-    
+
 }
 
 table {
@@ -320,6 +336,7 @@ th,
 td {
     padding: 8px;
     text-align: center;
+    background-color: #7AAAEB;
 }
 
 
@@ -363,7 +380,7 @@ td {
     border: 1px solid #888;
     width: 90%;
     color: #000;
-    font-size: 15px;
+    font-size: 24px;
 }
 
 .modal-content p {
@@ -479,7 +496,8 @@ td {
 
 .main {
     display: flex;
-    align-items: center; /* Alignez verticalement au centre */
+    align-items: center;
+    /* Alignez verticalement au centre */
     height: 500px;
     position: relative;
     background-image: url(/Couple-Famillewebsite/Image/aloevera.jpg);
@@ -492,26 +510,33 @@ td {
     height: 400px;
     margin-bottom: 0;
     background-position-y: -350px;
-  }
-  
-  .main>p {
+}
+
+.main>p {
     color: #f0f0f0;
-    flex: 1; /* Faites en sorte que le paragraphe prenne tout l'espace disponible en largeur */
-    margin: 0; /* Supprimez la marge par défaut du paragraphe */
-    padding: 20px; /* Ajoutez un peu d'espace intérieur */
+    flex: 1;
+    /* Faites en sorte que le paragraphe prenne tout l'espace disponible en largeur */
+    margin: 0;
+    /* Supprimez la marge par défaut du paragraphe */
+    padding: 20px;
+    /* Ajoutez un peu d'espace intérieur */
     background-color: rgba(0, 0, 0, 0.2);
-    text-align: left; /* Alignez le texte à gauche */
-  }
-  
-  .main::before {
+    text-align: left;
+    /* Alignez le texte à gauche */
+}
+
+.main::before {
     content: "";
-    flex: 1; /* Ajoutez un espace vide à droite pour séparer le texte de l'image */
-  }
-  
-  .main img {
-    height: 100%; /* Ajustez la hauteur de l'image pour occuper toute la hauteur du conteneur */
-    max-width: 100%; /* Assurez-vous que l'image ne dépasse pas la largeur du conteneur */
-  }
+    flex: 1;
+    /* Ajoutez un espace vide à droite pour séparer le texte de l'image */
+}
+
+.main img {
+    height: 100%;
+    /* Ajustez la hauteur de l'image pour occuper toute la hauteur du conteneur */
+    max-width: 100%;
+    /* Assurez-vous que l'image ne dépasse pas la largeur du conteneur */
+}
 
 
 
@@ -588,7 +613,7 @@ td {
 }
 
 .map {
-    width: 80%;
+    width: 100%;
 }
 
 /* .left-line {
@@ -599,10 +624,12 @@ td {
     border-left: 5px solid #ED1E18;
 } */
 .container p {
+    padding: 10px 10px 10px 10px;
     color: #ED1E18;
-    font-size: 16px;
+    font-size: 24px;
     margin: -10px 0px 20px 0px;
 }
+
 
 #texte {
     color: #000;
@@ -633,17 +660,19 @@ td {
         margin-bottom: 0;
         background-position-y: -350px;
     }
-    .apropo>p{
+
+    .apropo>p {
         font-size: 16px;
         text-align: center;
-    margin: 25px 40px 0px 40px;
-    color: #000;
+        margin: 25px 40px 0px 40px;
+        color: #000;
     }
-    .texte{
+
+    .texte {
         font-size: 16px;
         text-align: center;
-    margin: 25px 40px 0px 40px;
-    color: #000;
+        margin: 25px 40px 0px 40px;
+        color: #000;
     }
 }
 
@@ -662,7 +691,7 @@ td {
 
     /* Par exemple, pour les écrans plus grand que 400px */
     .btn {
-        
+
         border-radius: 100px;
     }
 
@@ -675,10 +704,14 @@ td {
         height: 100%;
     }
 
+    #Quisommesnous {
+        margin-bottom: -100px;
+    }
+
     .Accueil>p {
         position: relative;
         z-index: 1;
-        margin-top: 62px;
+        margin-top: 62cpx;
         font-family: 'Sacramento', cursive;
         color: #ffffff;
         font-size: 64px;
@@ -712,9 +745,9 @@ td {
         place-content: stretch space-around;
         align-items: center;
         flex-direction: column;
-        margin-top: 200px;
+        margin-top: 50px;
     }
-    
+
 
 
 }
@@ -783,9 +816,9 @@ td {
 
 /* Styles pour le texte superposé */
 .text-overlay {
-    font-size: large;
+    font-size: 22px;
     margin-top: 200px;
-   
+
     height: auto;
     position: relative;
     /* Assurez-vous que le texte est positionné par rapport à la div d'équipe */
