@@ -13,25 +13,40 @@ document.addEventListener("DOMContentLoaded", () => {
     // ... (code précédent)
 
     // Gestion du deuxième modal
+
     let btnmediatrice = document.getElementById("myBtn1")
     let btn2 = document.getElementById("myBtn2");
+    let modal = document.getElementById("myModal");
     let modal2 = document.getElementById("myModal2");
     let modal3 = document.getElementById("myModal3");
-    let span2 = document.getElementsByClassName("close")[1]; // Utilisez l'index 1 pour le deuxième modal
-    let span3 = document.getElementsByClassName("close")[2];
+    let modal4 = document.getElementById("myModal4");
+    // let span2 = document.getElementsByClassName("close")[1]; // Utilisez l'index 1 pour le deuxième modal
+    // let span3 = document.getElementsByClassName("close")[2];
+    var span4 = document.getElementById("myModal4").querySelector(".close");
+    var span3 = document.getElementById("myModal3").querySelector(".close");
+    var span2 = document.getElementById("myModal2").querySelector(".close");
+    var span1 = document.getElementById("myModal").querySelector(".close");
+
+    btnrdv.onclick = function () {
+        modal4.style.display = "block";
+    }
     btn2.onclick = function () {
         modal2.style.display = "block";
     }
     btnmediatrice.onclick = function () {
         modal3.style.display = "block";
     }
-
+    span1.onclick = function () {
+        modal.style.display = "none";
+    }
     span2.onclick = function () {
         modal2.style.display = "none";
     }
     span3.onclick = function () {
-        console.log('test')
         modal3.style.display = "none";
+    }
+    span4.onclick = function () {
+        modal4.style.display = "none";
     }
 
     window.onclick = function (event) {
@@ -40,6 +55,12 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         if (event.target == modal3) {
             modal3.style.display = "none";
+        }
+        if (event.target == modal4) {
+            modal4.style.display = "none";
+        }
+        if (event.target == modal) {
+            modal.style.display = "none";
         }
     }
 

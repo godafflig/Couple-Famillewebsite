@@ -73,7 +73,7 @@ header {
 
 .btnA {
 
-    color: #7AAAEB;
+    color: #ED1E18;
     font-size: 30px;
     background-color: #00000000;
     border: none;
@@ -81,7 +81,7 @@ header {
 
 .btnA:hover {
     color: #7AAAEB;
-    font-size: 22px;
+    font-size: 26px;
     border-color: #000;
 }
 
@@ -97,6 +97,7 @@ header {
     /* Fixe l'image en arrière-plan pour éviter le défilement */
     height: 400px;
     margin-bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2); 
 
 }
 
@@ -124,16 +125,23 @@ header {
 }
 
 .premiere::before {
-    content: "";
+    /* content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.2); */
     /* Couleur de fond sombre semi-transparente */
 }
+.rdvcontent{
 
+  display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: space-around;
+}
 .Accueil {
 
     text-align: center;
@@ -144,10 +152,10 @@ header {
 .Accueil>p {
     position: relative;
     z-index: 1;
-    margin-top: 12px;
-    font-family: 'Sacramento', cursive;
+    
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: #ffffff;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .apropo {
@@ -181,9 +189,9 @@ header {
 
 #aloevera {
 
-    width: 50vw;
+    width: 30vw;
     /* 50% de la largeur de l'écran */
-    height: 150vh;
+    height: 100%;
     /* 100% de la hauteur de l'écran */
     background-image: url(/Chemin/vers/votre/image.jpg);
     /* Remplacez par le chemin de votre image */
@@ -195,13 +203,12 @@ header {
 
 .liste {
     list-style-type: none;
-
-    font-size: 20px;
-    line-height: 2;
-    margin-top: 50px;
-    margin-bottom: 10px;
+    font-size: 30px;
+    line-height: 2.3;
+    margin-top: 120px;
+    /* margin-bottom: auto; */
     padding-left: 20px;
-    margin-left: 80px;
+    margin-left: 0px;
 }
 
 .liste li {
@@ -223,6 +230,10 @@ header {
     text-align: center;
 
     color: #000;
+}
+#contact{
+
+    margin-bottom: -155px;
 }
 
 .equipe p {
@@ -251,7 +262,7 @@ header {
     color: #000;
 }
 
-.video {
+/* .video {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -259,7 +270,7 @@ header {
     margin-top: 40px;
     width: 350px;
     height: 350px;
-}
+} */
 
 .scrollable-content {
     max-height: 80vh;
@@ -324,19 +335,65 @@ table {
     border-collapse: collapse;
     width: 50%;
     margin: 20px auto;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); Ombre */
+    border-radius: 30px  30px  30px  30px;
 }
-
-table,
-th,
-td {
-    border: 1px solid black;
+tbody{
+    border-radius: 30px  30px  30px  30px;
 }
-
-th,
-td {
+.Horaires {
+    border-collapse: collapse;
+    width: 85%;
+    margin: 0 auto;
+    border: #00000000;
+    /* border-radius: 10px; Bordures arrondies */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Ombre */
+}
+.titre {
+    text-align: center;
+}
+th, td {
+    border: 1px solid #ddd;
     padding: 8px;
     text-align: center;
-    background-color: #7AAAEB;
+    
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+/* tr:hover {
+    background-color: #ddd;
+} */
+#Fermé{
+    border-radius: 0px 0px 30px 0px;
+    border: #00000000;
+}
+#Dimanche{
+    border-radius: 0px 0px 0px 30px;
+    border: #00000000;
+}
+#Horaires{border-radius: 0px 30px 0px 0px;border: #00000000;}
+#journée{border-radius: 30px 0px 0px 0px;border: #00000000;}
+
+#Quotient{border-radius: 30px 0px 0px 0px;border: #00000000;}
+#Entretien{border-radius: 0px 30px 0px 0px;border: #00000000;}
+#Supérieur{border-radius: 0px 0px 30px 0px;border: #00000000;}
+#quatre{border-radius: 0px 0px 0px 30px;border: #00000000;}
+
+
+
+.col1{
+    background-color: #176ee947;
+}
+.col2{
+    background-color: #ddd;
+}
+.tarif {
+    border-collapse: collapse;
+    width: 85%;
+    margin: 0 auto;
+    border: #00000000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -421,9 +478,15 @@ td {
 }
 
 .menu-container.active {
-    max-height: 230px;
+    max-height: 300px;
     border-radius: 0px 0px 30px 30px;
     color: #000000;
+}
+#secretaire{
+    text-align: center;
+    font-size: 30px;
+    color: #000;
+    margin: 0px 10px 20px 10px;
 }
 
 .nav_list {
@@ -434,16 +497,29 @@ td {
     margin-right: auto;
     width: 50%;
 }
+#smartphone{
+    width: 60px;
+}
 
 .rdvcontainer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-content: stretch;
+    align-content: center center;
     justify-content: space-around;
+    
 
 }
-
+.equipetitre{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: flex-end;
+    align-items: flex-end;
+}
+.equipetitre img{
+    width: 80px;
+}
 
 
 .nav__item {
@@ -498,7 +574,7 @@ td {
     display: flex;
     align-items: center;
     /* Alignez verticalement au centre */
-    height: 500px;
+    
     position: relative;
     background-image: url(/Couple-Famillewebsite/Image/aloevera.jpg);
     background-size: cover;
@@ -507,7 +583,7 @@ td {
     /* Centre l'image horizontalement et verticalement */
     background-attachment: fixed;
     /* Fixe l'image en arrière-plan pour éviter le défilement */
-    height: 400px;
+    height: 300px;
     margin-bottom: 0;
     background-position-y: -350px;
 }
@@ -551,13 +627,7 @@ td {
 }
 
 
-.Horaires {
 
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-
-}
 
 .Horaires>p {
     margin-bottom: 20px;
@@ -636,60 +706,32 @@ td {
     text-align: center;
 }
 
-@media (max-width: 400px) {
 
-    /* Par exemple, pour les écrans plus petits que 400px */
-    .map {
-        display: none;
-    }
+.vitrine{
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-    .header-laptop {
-        display: none;
-    }
-
-    .premiere {
-        position: relative;
-        background-image: url(/Couple-Famillewebsite/Image/couplevelo.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-        /* Centre l'image horizontalement et verticalement */
-        background-attachment: fixed;
-        /* Fixe l'image en arrière-plan pour éviter le défilement */
-        height: 400px;
-        margin-bottom: 0;
-        background-position-y: -350px;
-    }
-
-    .apropo>p {
-        font-size: 16px;
-        text-align: center;
-        margin: 25px 40px 0px 40px;
-        color: #000;
-    }
-
-    .texte {
-        font-size: 16px;
-        text-align: center;
-        margin: 25px 40px 0px 40px;
-        color: #000;
+.vitrinemobile{
+    display: none;
+}
+.vitrine img {
+    width: calc(50% - 10px); /* La largeur de chaque image est de 50% de la largeur du conteneur moins un espacement de 10px */
+    margin-bottom: 10px; /* Espacement entre les lignes d'images */
+}
+@media screen and (max-width: 600px) {
+    /* Styles spécifiques pour les écrans dont la largeur est inférieure ou égale à 600px */
+    .vitrinemobile {
+        flex-direction: column; /* Met les images sur deux colonnes */
     }
 }
 
+ /* Par exemple, pour les écrans plus grand que 400px */
 @media (min-width: 400px) {
-    .text-overlay {
-        font-size: large;
-        margin: 550px 150px 0px 150px;
-        height: auto;
-        position: relative;
-        z-index: 1;
-        color: #fff;
-        text-align: center;
-        padding: 20px;
-        background-color: rgba(0, 0, 0, 0.5);
-    }
+   
 
-    /* Par exemple, pour les écrans plus grand que 400px */
+   
     .btn {
 
         border-radius: 100px;
@@ -762,10 +804,18 @@ td {
 .map1 {
     display: none;
 }
+.Quisommesnous{
+
+  /* Permalink - use to edit and share this gradient. Permalien - à utiliser pour éditer et partager ce gradient: https://colorzilla.com/gradient-editor/#b8e1fc+0,a9d2f3+10,90bae4+25,90bcea+37,90bff0+50,6ba8e5+51,a2daf5+83,bdf3fd+100;Blue+Gloss+%231 */
+background: linear-gradient(to bottom,  #b8e1fc 0%,#a9d2f3 10%,#90bae4 25%,#90bcea 37%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+   
+
+}
 
 .container .right-column p img {
 
-    margin: 0px 30px 0px 0px;
+    margin: 0px 10px 0px 0px;
     width: 46px;
     height: auto;
     /* Ajuste automatiquement la hauteur en fonction de la largeur */
@@ -789,14 +839,14 @@ td {
 
 /* Styles pour la vidéo */
 .video {
-    margin-top: 100px;
+    margin-top: 151px;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.7;
+    /* opacity: 0.7; */
     /* Ajustez l'opacité selon vos préférences pour la lisibilité */
 }
 
@@ -836,4 +886,106 @@ td {
 .texte {
     max-width: 100%;
     /* Ajustez la largeur du texte selon vos préférences */
+}
+/* Par exemple, pour les écrans plus petits que 400px */
+@media (max-width: 400px) {
+   
+    #secretaire{
+        font-size: 15px;
+        color: #000;
+        margin: 0px 10px 20px 10px;
+    }
+    .video{
+
+        margin-top: 220px;
+    }
+    .text-overlay {
+        font-size: 12px;
+        margin-top: 12px;
+      
+    }
+    .equipetitre{
+        margin-top: 60px;
+    }
+
+    
+    #aloevera {
+        width: 50vw;
+        height: 70vh;
+        background-image: url(/Chemin/vers/votre/image.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+
+    }
+   
+
+    .liste {
+        margin-top: 0px;
+        margin-left: 0px;
+        font-size: 10px;
+    }
+    .vitrine{
+        display: none;
+    }
+
+    .vitrinemobile img {
+        width: 100%; /* Les images occupent toute la largeur lorsque l'écran est étroit */
+        margin-bottom: 10px;
+    }
+    .vitrinemobile{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Deux colonnes égales */
+        /* grid-gap: 10px; Espacement entre les images */
+        margin-left: auto; /* Centre la grille horizontalement */
+        margin-right: auto; 
+    }
+
+    .map {
+        display: none;
+    }
+
+    .header-laptop {
+        display: none;
+    }
+
+    .premiere {
+        position: relative;
+        background-image: url(/Couple-Famillewebsite/Image/couplevelo.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        /* Centre l'image horizontalement et verticalement */
+        background-attachment: fixed;
+        /* Fixe l'image en arrière-plan pour éviter le défilement */
+        height: 500px;
+        margin-bottom: 0;
+        background-position-y: -50px;
+        background-color: rgba(0, 0, 0, 0.2); 
+    }
+
+    .apropo>p {
+        font-size: 16px;
+        text-align: center;
+        margin: 25px 40px 0px 40px;
+        color: #000;
+    }
+
+    .texte {
+        font-size: 16px;
+        text-align: center;
+        margin: 25px 40px 0px 40px;
+        color: #000;
+    }
+    .container p {
+        padding: 10px 10px 10px 10px;
+        color: #ED1E18;
+        font-size: 14px;
+        margin: -10px 0px 20px 0px;
+    }
+    #contact{
+        margin-top: 60px;
+        margin-bottom: -20px;
+    }
 }
