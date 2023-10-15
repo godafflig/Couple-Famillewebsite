@@ -112,4 +112,31 @@ window.onclick = function (event) {
         modal.style.display = "none";
     }
 }
+let lastScrollY = 0;
+
+function checkScroll() {
+    const triggerOffset = window.innerHeight / 6;
+    const scrollY = window.scrollY;
+
+    // Vérifiez la direction du défilement
+    if (scrollY > lastScrollY) {
+        // Vers le bas
+        animatedElements.forEach((element) => {
+            const elementTop = element.getBoundingClientRect().top + scrollY;
+            if (elementTop < scrollY + window.innerHeight - triggerOffset) {
+                element.classList.add('active');
+            }
+        });
+    } else {
+        // Vers le haut
+        animatedElements.forEach((element) => {
+            const elementTop = element.getBoundingClientRect().top + scrollY;
+            if (elementTop > scrollY + window.innerHeight - triggerOffset) {
+                element.classList.remove('active');
+            }
+        });
+    }
+
+    lastScrollY = scrollY;
+}
 
