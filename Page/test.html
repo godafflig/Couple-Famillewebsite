@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation au Scroll</title>
+</head>
+<style>
+    #resetButton {
+        width: 250px;
+        height: 120px;
+        border-radius: 50px;
+        align-items: center;
+    }
+
+    #resetButton:hover {
+        width: 120px;
+        height: 60px;
+    }
+
+    .animated-element {
+        /* Réduisez la valeur du margin-top */
+        margin-top: 20px;
+        font-size: 30px;
+        color: black;
+        /* Couleur initiale du texte */
+        opacity: 0;
+        transform: translateY(20px);
+        text-align: center;
+        transition: opacity 0.5s, transform 0.5s, color 0.5s;
+        /* Ajout de transition de couleur */
+    }
+
+    .animated-element.active {
+        color: red;
+        /* Couleur rouge lorsque l'élément est actif */
+        opacity: 1;
+        transform: translateY(0);
+        text-align: center;
+    }
+
+    .element {
+        margin-top: 20px;
+        font-size: 30px;
+        color: black;
+        /* Couleur initiale du texte */
+        opacity: 0;
+        transform: translateY(20px);
+        text-align: center;
+
+    }
+
+    /* Ajoutez une marge supérieure négative à l'élément ancré */
+    #Quisommesnous {
+        margin-top: -100px;
+    }
+</style>
+
+<body>
+    <hr id="Quisommesnous">
+    <div class="animated-element">Element 1</div>
+    <div class="animated-element">Element 2</div>
+    <div class="animated-element">Element 3</div>
+    <div class="animated-element">Element 1</div>
+    <div class="animated-element">Element 2</div>
+    <div class="animated-element">Element 3</div>
+    <div class="animated-element">Element 1</div>
+    <div class="animated-element">Element 2</div>
+    <div class="animated-element">Element 3</div>
+    <div class="animated-element">Element 1</div>
+    <div class="animated-element">Element 2</div>
+    <div class="animated-element">Element 3</div>
+    <div class="animated-element">Element 1</div>
+    <div class="animated-element">Element 2</div>
+    <div class="animated-element">Element 3</div>
+    <div class="animated-element">Element 1</div>
+    <div class="animated-element">Element 2</div>
+    <div class="animated-element">Element 3</div>
+    <div class="animated-element">Element 1</div>
+    <div class="animated-element">Element 2</div>
+    <div class="animated-element">Element 3</div>
+    <div class="animated-element">Element 1</div>
+    <div class="animated-element">Element 2</div>
+    <div class="animated-element">Element 3</div>
+    <div class="animated-element">Element 1</div>
+    <div class="animated-element">Element 2</div>
+    <div class="element">Element 3</div>
+    <div class="element">Element 3</div>
+    <div class="element">Element 1</div>
+    <div class="element">Element 2</div>
+    <div class="element">Element 3</div>
+    <div class="element">Element 1</div>
+    <div class="element">Element 2</div>
+    <div class="element">Element 3</div>
+    <a href="#Quisommesnous" class="nav__link">Qui sommes nous ?</a>
+
+    <script>
+        // Sélectionnez tous les éléments avec la classe "animated-element"
+        const animatedElements = document.querySelectorAll('.animated-element');
+        let lastScrollY = 0;
+
+        function checkScroll() {
+            //qui est égale à un sixième de la hauteur de la fenêtre
+            const triggerOffset = window.innerHeight / 6; // Cette ligne définit une variable triggerOffset qui est égale 
+            // à un sixième de la hauteur de la fenêtre 
+            const scrollY = window.scrollY; //: Cette ligne définit une variable scrollY qui stocke la position actuelle 
+            // de défilement vertical de la page, mesurée en pixels par rapport au haut de la page.
+
+            // Vérifiez la direction du défilement
+            if (scrollY > lastScrollY) { //Cette condition vérifie si la position actuelle de défilement (scrollY) 
+                // est supérieure à la position de défilement précédente 
+
+                // Ce bloc de code est exécuté lorsque l'utilisateur fait défiler 
+                // la page vers le bas. Nous parcourons tous les éléments stockés dans animatedElements 
+                //(ceux avec la classe "animated-element") en utilisant la méthode forEach.
+                // Vers le bas
+                animatedElements.forEach((element) => {
+                    const elementTop = element.getBoundingClientRect().top + scrollY; //Cette ligne calcule 
+                    //la position verticale absolue de chaque élément par rapport au haut de la page. 
+                    // La méthode getBoundingClientRect() renvoie la position de l'élément par rapport à la vue de la fenêtre, 
+                    // et en ajoutant scrollY, nous obtenons la position par rapport au haut de la page.
+                    if (elementTop < scrollY + window.innerHeight - triggerOffset) { //
+                        // 
+                        element.classList.add('active');
+                    }
+                });
+            } else {
+                // Vers le haut
+                animatedElements.forEach((element) => {
+                    const elementTop = element.getBoundingClientRect().top + scrollY;
+                    // Cette ligne calcule la position verticale absolue de chaque élément par rapport au haut de la page.
+                    //  La méthode getBoundingClientRect() renvoie la position de l'élément par rapport à la vue de la fenêtre,
+                    //  et en ajoutant scrollY, nous obtenons la position par rapport au haut de la page.
+                    if (elementTop > scrollY + window.innerHeight - triggerOffset) {
+                        // Cette condition vérifie si l'élément est suffisamment éloigné du haut de la fenêtre pour être considéré
+                        // comme "hors de la vue". Si la position elementTop est supérieure à la position actuelle de défilement
+                        //  (scrollY) plus la hauteur de la fenêtre (window.innerHeight) moins triggerOffset, alors on considère
+                        //  que l'élément est hors de la vue, et on lui supprime la classe "active". Cela désactivera l'animation de l'élément.
+                        element.classList.remove('active');
+                    }
+                });
+            }
+
+            lastScrollY = scrollY;
+        }
+
+        // Attachez l'écouteur d'événement de défilement
+        window.addEventListener('scroll', checkScroll);
+
+        // Vérifiez initialement les éléments à la charge de la page
+        window.addEventListener('load', checkScroll);
+
+        // Ajoutez un gestionnaire d'événements pour le bouton de réinitialisation
+        const resetButton = document.getElementById('resetButton');
+        resetButton.addEventListener('click', () => {
+            // Supprimez la classe "active" pour réinitialiser l'état des éléments
+            animatedElements.forEach((element) => {
+                element.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

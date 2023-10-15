@@ -87,7 +87,7 @@ header {
 
 .premiere {
     position: relative;
-    background-image: url(/Couple-Famillewebsite/Image/couplevelo.jpg);
+    background-image: url(/Image/couplevelo.jpg);
     background-size: cover;
     /* Redimensionne l'image pour remplir entièrement la div */
     background-repeat: no-repeat;
@@ -193,7 +193,7 @@ header {
     /* 50% de la largeur de l'écran */
     height: 100%;
     /* 100% de la hauteur de l'écran */
-    background-image: url(/Chemin/vers/votre/image.jpg);
+    background-image: url(/Image/aloevera.jpg);
     /* Remplacez par le chemin de votre image */
     background-size: cover;
     background-repeat: no-repeat;
@@ -560,6 +560,16 @@ tr:nth-child(even) {
     position: relative;
     left: 50%;
 }
+.logofamille.active {
+    animation: 1s ease-out 0s 1 slideInLeft;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateX(-50%) translateY(100px);
+    /* Déplace l'image vers le bas de 100px tout en la centrant horizontalement */
+    width: 50%;
+    position: relative;
+    left: 50%;
+}
 
 #titrelogo {
     display: block;
@@ -754,9 +764,8 @@ tr:nth-child(even) {
         position: relative;
         z-index: 1;
         margin-top: 62cpx;
-        font-family: 'Sacramento', cursive;
         color: #ffffff;
-        font-size: 64px;
+        font-size: 50px;
     }
 
     .header {
@@ -952,7 +961,7 @@ background: linear-gradient(to bottom,  #b8e1fc 0%,#a9d2f3 10%,#90bae4 25%,#90bc
 
     .premiere {
         position: relative;
-        background-image: url(/Couple-Famillewebsite/Image/couplevelo.jpg);
+        background-image: url(/Image/couplevelo.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
