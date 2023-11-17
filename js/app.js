@@ -75,12 +75,12 @@ document.addEventListener("DOMContentLoaded", () => {
         menuContainer.classList.toggle("active");
 
         // Vérifiez l'attribut src actuel pour déterminer quelle image afficher
-        if (imageElement.getAttribute("src") === "/Couple-Famillewebsite/Image/menu.png") {
+        if (imageElement.getAttribute("src") === "/Image/menu.png") {
             // Changez l'image au clic
-            imageElement.setAttribute("src", "/Couple-Famillewebsite/Image/autre_image.png");
+            imageElement.setAttribute("src", "/Image/autre_image.png");
         } else {
             // Revert to the original image if it's already changed
-            imageElement.setAttribute("src", "/Couple-Famillewebsite/Image/menu.png");
+            imageElement.setAttribute("src", "/Image/menu.png");
         }
 
     });

@@ -29,6 +29,7 @@ td {
 
 html,
 body {
+    scroll-behavior: smooth;
     height: 100%;
     margin: 0;
     font-family: Arial, sans-serif;
@@ -162,6 +163,9 @@ header {
     text-align: center;
     margin-top: 100px;
     color: #000000;
+    column-count: 2; /* Divise en deux colonnes */
+    column-gap: 20px; /* Espace entre les colonnes */
+    text-align: center; /* Centre le texte dans chaque colonne */
 }
 
 .apropo>p {
@@ -170,6 +174,13 @@ header {
     text-align: center;
     margin: 25px 80px 0px 80px;
     color: #000;
+    padding: 30px;
+   
+    grid-template-columns: repeat(2,2);
+}
+
+.titre {
+    
 }
 
 .logocoupleetfamille {
@@ -228,7 +239,8 @@ header {
 .titre {
     font-size: 40px;
     text-align: center;
-
+    text-align: center; /* Centre le titre */
+    column-span: all; /* Fait en sorte que le titre s'étende sur les deux colonnes */
     color: #000;
 }
 #contact{
@@ -277,6 +289,7 @@ header {
     /* Hauteur maximale relative à la vue (viewport height, vh) */
     overflow-y: auto;
     /* Ajoute une barre de défilement en cas de dépassement de la hauteur maximale */
+    padding: 10px;
 }
 
 hr {
@@ -443,8 +456,10 @@ tr:nth-child(even) {
 .modal-content p {
 
     margin: 10px 0px 0px 0px;
+    padding: 20px;
 
 }
+.scrollable-content
 
 .close {
     color: #aaaaaa;
@@ -487,6 +502,8 @@ tr:nth-child(even) {
     font-size: 30px;
     color: #000;
     margin: 0px 10px 20px 10px;
+    padding: 40px;
+    max-width: 75%;
 }
 
 .nav_list {
@@ -519,6 +536,7 @@ tr:nth-child(even) {
 }
 .equipetitre img{
     width: 80px;
+    margin-left: 50px;
 }
 
 
@@ -740,7 +758,7 @@ tr:nth-child(even) {
  /* Par exemple, pour les écrans plus grand que 400px */
 @media (min-width: 400px) {
    
-
+   
    
     .btn {
 
@@ -893,16 +911,31 @@ background: linear-gradient(to bottom,  #b8e1fc 0%,#a9d2f3 10%,#90bae4 25%,#90bc
 }
 
 .texte {
-    max-width: 100%;
+    max-width: 50%;
     /* Ajustez la largeur du texte selon vos préférences */
 }
 /* Par exemple, pour les écrans plus petits que 400px */
 @media (max-width: 400px) {
+    .modal-content {
+       
+        margin: auto;
+        padding: 30px;
+        border: 1px solid #888;
+        width: 90%;
+        color: #000;
+        font-size: 14px;
+    }
+    .modal-content h2 {
+       align-items: center;
+       justify-content: center;
+    }
+
    
     #secretaire{
         font-size: 15px;
         color: #000;
         margin: 0px 10px 20px 10px;
+        
     }
     .video{
 
