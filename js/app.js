@@ -140,9 +140,10 @@ function checkScroll() {
     lastScrollY = scrollY;
 }
 
-document.getElementById("ouvrirEmail").addEventListener("click", function(event) {
-    event.preventDefault();
-    var adresseEmail = "couplefamillelyon@wanaddo.fr"; // Remplacez par l'adresse e-mail que vous souhaitez utiliser
-    window.location.href = "mailto:" + adresseEmail;
-});
+
+    document.getElementById("ouvrirEmail").addEventListener("click", function(event) {
+        event.preventDefault();
+        var emailLink = document.getElementById("ouvrirEmail").getAttribute("href");
+        window.location.href = emailLink;
+    });
 
