@@ -91,7 +91,7 @@ header {
 
 .premiere {
     position: relative;
-    background-image: url(/Image/couplevelo.jpg);
+    background-image: url(couplevelo.jpg);
     background-size: cover;
     /* Redimensionne l'image pour remplir entièrement la div */
     background-repeat: no-repeat;
@@ -211,7 +211,7 @@ header {
     /* 50% de la largeur de l'écran */
     height: 100%;
     /* 100% de la hauteur de l'écran */
-    background-image: url(/Image/aloevera.jpg);
+    background-image: url(aloevera.jpg);
     /* Remplacez par le chemin de votre image */
     background-size: cover;
     background-repeat: no-repeat;
@@ -666,7 +666,7 @@ tr:nth-child(even) {
     /* Alignez verticalement au centre */
 
     position: relative;
-    background-image: url(/Couple-Famillewebsite/Image/aloevera.jpg);
+    background-image: url(aloevera.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -1049,7 +1049,7 @@ tr:nth-child(even) {
     #aloevera {
         width: 50vw;
         height: 70vh;
-        background-image: url(/Chemin/vers/votre/image.jpg);
+       
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
@@ -1095,7 +1095,7 @@ tr:nth-child(even) {
 
     .premiere {
         position: relative;
-        background-image: url(/Image/couplevelo.jpg);
+        background-image: url(couplevelo.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
