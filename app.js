@@ -112,6 +112,7 @@ window.onclick = function (event) {
         modal.style.display = "none";
     }
 }
+
 let lastScrollY = 0;
 
 function checkScroll() {
