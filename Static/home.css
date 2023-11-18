@@ -10,7 +10,6 @@ li,
 h1,
 h2,
 h3,
-h4,
 h5,
 h6,
 pre,
@@ -38,6 +37,9 @@ body {
     /* Pour éviter la barre de défilement horizontale */
     background-color: #ffffff;
     /* Le dégradé va du bas (#3498db, bleu) vers le haut (#ffffff, blanc) */
+}
+h4{
+    margin:0;
 }
 
 /* Autres styles pour le contenu de la page */
@@ -275,11 +277,19 @@ header {
     text-align: center;
     margin-top: 100px;
     color: #000000;
+    margin-bottom: 100px;
 }
 
 .Localisation>p {
     margin: 50px 0px 50px 0px;
     color: #000;
+}
+.footer{
+    margin-top: 100px;
+}
+.footer img{
+    width: 100%;
+    height: 30%;
 }
 
 /* .video {
@@ -449,6 +459,7 @@ tr:nth-child(even) {
     margin: 0 auto;
     border: #00000000;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    
 }
 
 
@@ -497,8 +508,12 @@ tr:nth-child(even) {
 
 .modal-content p {
 
+<<<<<<< HEAD
     margin: 10px 0px 0px 0px;
     padding: 20px;
+=======
+  
+>>>>>>> 4705354fab58886572bfb05a9008f1360c7daaad
 
 }
 
@@ -543,9 +558,13 @@ tr:nth-child(even) {
     text-align: center;
     font-size: 30px;
     color: #000;
+<<<<<<< HEAD
     margin: 0px 10px 20px 10px;
     padding: 40px;
     max-width: 75%;
+=======
+    margin: 20px 10px 20px 10px;
+>>>>>>> 4705354fab58886572bfb05a9008f1360c7daaad
 }
 
 .nav_list {
@@ -899,7 +918,7 @@ tr:nth-child(even) {
 
 .container .right-column p img {
 
-    margin: 0px 10px 0px 0px;
+    margin: 10px 10px -10px 0px;
     width: 46px;
     height: auto;
     /* Ajuste automatiquement la hauteur en fonction de la largeur */
@@ -909,6 +928,9 @@ tr:nth-child(even) {
     position: relative;
     height: 100vh;
     overflow: hidden;
+}
+#tarifs{
+    margin-top: 100px;
 }
 
 /* Styles pour la div d'arrière-plan de la vidéo */
@@ -1000,8 +1022,18 @@ tr:nth-child(even) {
     #secretaire {
         font-size: 15px;
         color: #000;
+<<<<<<< HEAD
         margin: 0px 10px 20px 10px;
 
+=======
+        margin: 20px 10px 20px 10px;
+    }
+    .Localisation {
+        text-align: center;
+        margin-top: 50px;
+        color: #000000;
+        margin-bottom: 50px;
+>>>>>>> 4705354fab58886572bfb05a9008f1360c7daaad
     }
 
     .video {
