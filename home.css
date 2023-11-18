@@ -99,7 +99,7 @@ header {
     /* Centre l'image horizontalement et verticalement */
     background-attachment: fixed;
     /* Fixe l'image en arrière-plan pour éviter le défilement */
-    height: 400px;
+    height: auto;
     margin-bottom: 0;
     background-color: rgba(0, 0, 0, 0.2);
 
@@ -820,12 +820,21 @@ tr:nth-child(even) {
         flex-direction: column;
         /* Met les images sur deux colonnes */
     }
+    .header-laptop {
+        display: none;
+    }
+}
+@media screen and (min-width: 650px) and (max-width: 800px) {
+    .header-laptop ul {
+       display: none;
+    }
 }
 
+
 /* Par exemple, pour les écrans plus grand que 400px */
-@media (min-width: 550px) {
+@media (min-width: 800px) {
 
-
+    
 
     .btn {
 
@@ -850,7 +859,7 @@ tr:nth-child(even) {
         z-index: 1;
         margin-top: 62cpx;
         color: #ffffff;
-        font-size: 50px;
+        font-size: 25px;
     }
 
     .header {
@@ -1135,7 +1144,7 @@ tr:nth-child(even) {
         margin-bottom: -20px;
     }
 }
-@media (max-width: 550px) {
+@media (max-width: 650px) {
     .apropo {
         text-align: center;
         margin-top: 100px;
