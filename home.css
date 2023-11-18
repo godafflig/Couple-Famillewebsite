@@ -823,7 +823,7 @@ tr:nth-child(even) {
 }
 
 /* Par exemple, pour les écrans plus grand que 400px */
-@media (min-width: 400px) {
+@media (min-width: 550px) {
 
 
 
@@ -1135,7 +1135,148 @@ tr:nth-child(even) {
         margin-bottom: -20px;
     }
 }
+@media (max-width: 550px) {
+    .apropo {
+        text-align: center;
+        margin-top: 100px;
+        color: #000000;
+        column-count: 1;
+    }
 
+    .modal-content {
+
+        margin: auto;
+        padding: 30px;
+        border: 1px solid #888;
+        width: 90%;
+        color: #000;
+        font-size: 14px;
+    }
+
+    .modal-content h2 {
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    #secretaire {
+        font-size: 15px;
+        color: #000;
+        margin: 20px 10px 20px 10px;
+    }
+
+    .Localisation {
+        text-align: center;
+        margin-top: 50px;
+        color: #000000;
+        
+    }
+
+    .video {
+
+        margin-top: 220px;
+    }
+
+    .text-overlay {
+        font-size: 12px;
+        margin-top: 12px;
+
+    }
+
+    .equipetitre {
+        margin-top: 60px;
+    }
+
+
+    #aloevera {
+        width: 50vw;
+        height: 70vh;
+       
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+
+    }
+
+
+    .liste {
+        margin-top: 0px;
+        margin-left: 0px;
+        font-size: 14px;
+    }
+
+    .vitrine {
+        display: none;
+    }
+
+    .vitrinemobile img {
+        width: 100%;
+        /* Les images occupent toute la largeur lorsque l'écran est étroit */
+        margin-bottom: 10px;
+    }
+
+    .vitrinemobile {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* Deux colonnes égales */
+        /* grid-gap: 10px; Espacement entre les images */
+        margin-left: auto;
+        /* Centre la grille horizontalement */
+        margin-right: auto;
+        gap: 100px;
+    }
+
+    .map {
+        display: none;
+    }
+
+    .header-laptop {
+        display: none;
+    }
+
+    .premiere {
+        position: relative;
+        background-image: url(couplevelo.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        /* Centre l'image horizontalement et verticalement */
+        background-attachment: fixed;
+        /* Fixe l'image en arrière-plan pour éviter le défilement */
+        height: 500px;
+        margin-bottom: 0;
+        background-position-y: -50px;
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+
+
+    .apropo>p {
+        font-size: 16px;
+        text-align: center;
+        margin: 25px 40px 0px 40px;
+        color: #000;
+    }
+
+    .texte {
+        font-size: 16px;
+        text-align: center;
+        /* margin: 25px 40px 0px 40px; */
+        color: #000;
+    }
+
+    .container p {
+        padding: 10px 10px 10px 10px;
+        color: #ED1E18;
+        font-size: 14px;
+        margin: -10px 0px 20px 0px;
+    }
+
+    #contact {
+        margin-top: 60px;
+        margin-bottom: -20px;
+    }
+}
 /* *{
     box-sizing: border-box;
     margin: 0;
