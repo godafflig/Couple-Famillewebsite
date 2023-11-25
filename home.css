@@ -548,7 +548,7 @@ tr:nth-child(even) {
 }
 
 .menu-container.active {
-    max-height: 300px;
+    max-height: 450px;
     border-radius: 0px 0px 30px 30px;
     color: #000000;
 }
