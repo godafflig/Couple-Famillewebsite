@@ -609,6 +609,7 @@ tr:nth-child(even) {
 .nav__link {
     color: #ffffff;
     /* Couleur du texte de la liste */
+    font-size: 11px;
     text-decoration: none;
     transition: color 0.3s ease-in-out;
     /* Transition de la couleur du texte */
@@ -880,7 +881,7 @@ tr:nth-child(even) {
         background-color: #7AAAEB;
         display: flex;
         flex-direction: row;
-        height: 183px;
+        height: 125px;
         font-weight: bold;
         list-style-type: none;
         justify-content: space-around;
